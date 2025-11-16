@@ -9,6 +9,7 @@ const gameSchema = new mongoose.Schema({
   imagenPortada: String,
   descripcion: String,
   completado: { type: Boolean, default: false },
+  puntuacion: { type: Number, min: 0, max: 5, default: 0 },
   fechaCreacion: { type: Date, default: Date.now }
 });
 
