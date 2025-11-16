@@ -12,5 +12,4 @@ const gameSchema = new mongoose.Schema({
   puntuacion: { type: Number, min: 0, max: 5, default: 0 },
   fechaCreacion: { type: Date, default: Date.now }
 });
-
 module.exports = mongoose.model("Game", gameSchema);

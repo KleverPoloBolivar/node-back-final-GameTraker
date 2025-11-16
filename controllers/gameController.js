@@ -27,3 +27,12 @@ exports.deleteGame = async (req, res) => {
     res.status(500).json({ error: "Error al eliminar juego" });
   }
 };
+
+exports.updateGame = async (req, res) => {
+  try {
+    const juegoActualizado = await Game.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(juegoActualizado);
+  } catch (error) {
+    res.status(500).json({ error: "Error al actualizar juego" });
+  }
+};
