@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Rutas API
 app.use("/api/juegos", gameRoutes);
-app.use("/api/reseñas", reviewRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // Conexión a MongoDB
 mongoose
